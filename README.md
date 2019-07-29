@@ -1,14 +1,14 @@
 # News Scraper
-TODO:
+Website to scrape hackernews.com and then allow for saving of interesting articles and notes associated with those articles.
 
 # Getting Started
-TODO:
+Clone off git, run npm, start mongod and GO!
 
 # Prerequisites
-TODO:
+Node.js, npm, mongoDB
 
 # Overview
-TODO:
+Site grabs data from other sites and reformats it for easier consumption
 
 # Deployment
 Navigate to https://github.com/aaaronmiller/newsScraper to clone.
@@ -20,7 +20,7 @@ Visual Studio Code, HTML, CSS, Javascript, JQuery, Bootstrap, Node.js, Express, 
 We use github for version control (https://github.com/your/project/tags).
 
 # In development
-TODO:
+Currently saving functions for articles are non-functional. Handlebars integration is not done. Ugh.
 
 # Author
 Aaron Miller
