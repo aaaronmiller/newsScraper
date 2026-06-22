@@ -1,39 +1,42 @@
 # News Scraper
-Website to scrape hackernews.com and then allow for saving of interesting articles and notes associated with those articles.
 
-# Getting Started
-Clone off git, run npm, start mongod and GO!
+> A full-stack web app that scrapes Hacker News, then lets you save articles and attach your own notes to them.
 
-# Prerequisites
-Node.js, npm, mongoDB
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Cheerio](https://img.shields.io/badge/Cheerio-E88C1F?style=for-the-badge)
 
-# Overview
-Site grabs data from other sites and reformats it for easier consumption
+Scrapes Hacker News server-side, stores articles you find interesting, and lets you attach notes to each one — a classic scrape-and-curate CRUD app.
 
-# Deployment
-Navigate to https://github.com/aaaronmiller/newsScraper to clone.
+## Features
 
-# Built With
-Visual Studio Code, HTML, CSS, Javascript, JQuery, Bootstrap, Node.js, Express, Handlebars, MongoDB, Mongoose, Axios, Cheerio
+- **Server-side scraping** of Hacker News via Axios + Cheerio
+- **Save articles** you want to keep, backed by MongoDB
+- **Notes** attached to saved articles (one-to-many via Mongoose)
+- **Handlebars** server-rendered views with a Bootstrap UI
 
-# Versioning
-We use github for version control (https://github.com/your/project/tags).
+## Tech stack
 
-# In development
-Currently saving functions for articles are non-functional. Handlebars integration is not done. Ugh.
+Node.js · Express · Handlebars · MongoDB · Mongoose · Axios · Cheerio · Bootstrap · jQuery
 
-# Author
+## Run locally
+
+```bash
+git clone https://github.com/aaaronmiller/newsScraper.git
+cd newsScraper
+npm install
+mongod &            # start a local MongoDB instance
+npm start           # then open http://localhost:3000
+```
+
+## Data model
+
+| Model | Purpose |
+|---|---|
+| `Article` | A scraped headline + link, flagged saved/unsaved |
+| `Note` | A user note referenced by an `Article` |
+
+## Author
+
 Aaron Miller
-
-# License
-This project is not licensed.
-
-# Acknowledgments
-
-Joe Rehfuss
-
-Trae Shanks
-
-Lan Truong
-
-James Hanley
